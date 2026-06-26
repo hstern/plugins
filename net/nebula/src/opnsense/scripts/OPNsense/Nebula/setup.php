@@ -114,11 +114,12 @@ function nebula_start($model)
         fwrite(STDERR, "nebula: invalid configuration (failed nebula -test); not starting\n");
         return;
     }
-    /* -S -T nebula: route the daemon's stdout/stderr to syslog under the
-     * "nebula" tag (the facility nebula_syslog() registers), so start failures
-     * and runtime logs are visible rather than dropped on /dev/null. */
+    /* -S -T nebula routes nebula's output to syslog under the "nebula" tag.
+     * The </dev/null >/dev/null 2>&1 detaches daemon(8) from the configd output
+     * pipe it inherits here; without it the long-lived supervisor holds that
+     * pipe open and configctl blocks until the configd timeout on every start. */
     $cmd = sprintf(
-        '%s -S -T nebula -p %s %s -config %s',
+        '%s -S -T nebula -p %s %s -config %s </dev/null >/dev/null 2>&1',
         DAEMON_BIN,
         escapeshellarg(Nebula::PID_FILE),
         NEBULA_BIN,
