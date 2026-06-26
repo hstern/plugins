@@ -20,11 +20,6 @@
             </am_lighthouse>
             <lighthouse_hosts type="TextField"/>
             <static_host_map type="TextField"/>
-            <tun_dev type="TextField">
-                <Mask>/^[a-z][a-z0-9]{0,14}$/</Mask>
-                <Default>nebula1</Default>
-                <Required>Y</Required>
-            </tun_dev>
             <ca type="TextField"/>
             <cert type="TextField"/>
             <key type="TextField"/>

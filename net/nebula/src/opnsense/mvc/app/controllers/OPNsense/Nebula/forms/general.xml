@@ -30,12 +30,6 @@
         <help>Maps a lighthouse overlay IP to its public underlay address(es), one per line: "192.168.100.1 = 198.51.100.1:4242".</help>
     </field>
     <field>
-        <id>nebula.general.tun_dev</id>
-        <label>Tunnel Device</label>
-        <type>text</type>
-        <help>Name of the tun interface Nebula creates (e.g. nebula1).</help>
-    </field>
-    <field>
         <id>nebula.general.ca</id>
         <label>CA Certificate</label>
         <type>textbox</type>
