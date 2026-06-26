@@ -1,0 +1,5 @@
+<menu>
+    <VPN>
+        <Nebula order="80" VisibleName="Nebula" cssClass="fa fa-project-diagram fa-fw" url="/ui/nebula"/>
+    </VPN>
+</menu>

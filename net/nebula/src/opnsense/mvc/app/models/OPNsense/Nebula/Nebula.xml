@@ -1,0 +1,33 @@
+<model>
+    <mount>//OPNsense/Nebula</mount>
+    <description>Nebula mesh overlay VPN</description>
+    <version>1.0.0</version>
+    <items>
+        <general>
+            <enabled type="BooleanField">
+                <Default>0</Default>
+                <Required>Y</Required>
+            </enabled>
+            <listen_port type="IntegerField">
+                <MinimumValue>0</MinimumValue>
+                <MaximumValue>65535</MaximumValue>
+                <Default>4242</Default>
+                <Required>Y</Required>
+            </listen_port>
+            <am_lighthouse type="BooleanField">
+                <Default>0</Default>
+                <Required>Y</Required>
+            </am_lighthouse>
+            <lighthouse_hosts type="TextField"/>
+            <static_host_map type="TextField"/>
+            <tun_dev type="TextField">
+                <Mask>/^[a-z][a-z0-9]{0,14}$/</Mask>
+                <Default>nebula1</Default>
+                <Required>Y</Required>
+            </tun_dev>
+            <ca type="TextField"/>
+            <cert type="TextField"/>
+            <key type="TextField"/>
+        </general>
+    </items>
+</model>

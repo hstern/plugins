@@ -1,0 +1,7 @@
+Nebula is a scalable overlay networking tool from Slack with a focus on
+performance, simplicity, and security. This plugin configures a single
+Nebula node on OPNsense: paste the trusted CA and this host's certificate
+and key, set the lighthouse and listen options, and run the daemon as a
+managed service.
+
+WWW: https://github.com/slackhq/nebula
