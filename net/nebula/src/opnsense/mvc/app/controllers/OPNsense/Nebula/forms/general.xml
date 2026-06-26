@@ -1,54 +1,54 @@
 <form>
     <field>
-        <id>general.enabled</id>
+        <id>nebula.general.enabled</id>
         <label>Enable Nebula</label>
         <type>checkbox</type>
         <help>Run the Nebula daemon and start it at boot.</help>
     </field>
     <field>
-        <id>general.listen_port</id>
+        <id>nebula.general.listen_port</id>
         <label>Listen Port</label>
         <type>text</type>
         <help>UDP port Nebula listens on. Default 4242; use 0 for an OS-assigned port (clients only).</help>
     </field>
     <field>
-        <id>general.am_lighthouse</id>
+        <id>nebula.general.am_lighthouse</id>
         <label>Act as Lighthouse</label>
         <type>checkbox</type>
         <help>Enable only if this node is a lighthouse (does host discovery and NAT punching for the mesh). Leave off for a normal node.</help>
     </field>
     <field>
-        <id>general.lighthouse_hosts</id>
+        <id>nebula.general.lighthouse_hosts</id>
         <label>Lighthouse Hosts</label>
         <type>textbox</type>
         <help>Overlay (Nebula) IPs of the lighthouses this node uses, one per line. Leave empty on a lighthouse.</help>
     </field>
     <field>
-        <id>general.static_host_map</id>
+        <id>nebula.general.static_host_map</id>
         <label>Static Host Map</label>
         <type>textbox</type>
         <help>Maps a lighthouse overlay IP to its public underlay address(es), one per line: "192.168.100.1 = 198.51.100.1:4242".</help>
     </field>
     <field>
-        <id>general.tun_dev</id>
+        <id>nebula.general.tun_dev</id>
         <label>Tunnel Device</label>
         <type>text</type>
         <help>Name of the tun interface Nebula creates (e.g. nebula1).</help>
     </field>
     <field>
-        <id>general.ca</id>
+        <id>nebula.general.ca</id>
         <label>CA Certificate</label>
         <type>textbox</type>
         <help>PEM of the trusted Nebula CA certificate(s) — written to ca.crt.</help>
     </field>
     <field>
-        <id>general.cert</id>
+        <id>nebula.general.cert</id>
         <label>Host Certificate</label>
         <type>textbox</type>
         <help>PEM of this node's host certificate — written to host.crt.</help>
     </field>
     <field>
-        <id>general.key</id>
+        <id>nebula.general.key</id>
         <label>Host Key</label>
         <type>textbox</type>
         <help>PEM of this node's host private key — written to host.key (mode 0600).</help>
