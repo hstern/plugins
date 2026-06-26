@@ -82,7 +82,9 @@ class Nebula extends BaseModel
         }
 
         $out .= "listen:\n  host: 0.0.0.0\n  port: " . $port . "\n";
-        $out .= "punchy:\n  punch: true\n";
+        /* sane defaults: punch + respond for NAT traversal, info-level text logs */
+        $out .= "punchy:\n  punch: true\n  respond: true\n";
+        $out .= "logging:\n  level: info\n  format: text\n";
         $out .= "tun:\n  dev: " . $tun . "\n";
         $out .= "firewall:\n";
         $out .= "  outbound:\n    - port: any\n      proto: any\n      host: any\n";
